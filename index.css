@@ -1,0 +1,259 @@
+/* Estilos del Main */
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: var(--content-width);
+    margin: 2rem auto;
+    padding: 0 1rem;
+    gap: 1.5rem;
+  }
+  
+  #main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(to right, var(--primary-color), var(--primary-color-darker));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  #Subtitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* FORMULARIO */
+  #form {
+    width: 100%;
+    max-width: 42rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-input-container {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  #form-input-task { 
+    flex: 1;
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background-color: var(--card-bg);
+    color: var(--text-color);
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  #form-input-task:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color-lighter);
+  }
+  
+  #agregarTarea {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+  }
+   
+  #agregarTarea:hover {
+    background-color: var(--primary-color-darker);
+    transform: translateY(-1px);
+  }
+  
+  #agregarTarea:active {
+    transform: translateY(0);
+  }
+  
+  #form-error-text {
+    color: var(--danger-color);
+    font-size: 0.875rem;
+    padding: 0.5rem 0;
+    min-height: 1.5rem;
+  }
+  
+  /* LISTA DE TAREAS */
+  .task-container {
+    width: 100%;
+    max-width: 42rem;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--card-bg);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+  }
+  
+  #task-list {
+    overflow-y: auto;
+    max-height: 24rem;
+    padding: 0.5rem;
+  }
+  
+  #task-list p {
+    text-align: center;
+    color: var(--text-secondary);
+    padding: 2rem 0;
+  }
+  
+  /* Tareas */
+  .tarea-completada,
+  .tarea-Pendiente {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: var(--radius-sm);
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: var(--transition);
+  }
+  
+  .tarea-completada {
+    color: var(--disabled-color);
+    text-decoration: line-through;
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  
+  .tarea-Pendiente:hover {
+    border-color: var(--primary-color-lighter);
+  }
+  
+  /* PARA LOS BOTONES DE LAS TAREAS */
+  .botones {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .btn-Eliminar,
+  .btn-completar {
+    width: 2.25rem;
+    height: 2.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-sm);
+    color: white;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .btn-Eliminar {
+    background-color: var(--danger-color);
+  }
+  
+  .btn-Eliminar:hover {
+    background-color: var(--danger-color-darker);
+  }
+  
+  .btn-completar {
+    background-color: var(--primary-color);
+  }
+  
+  .btn-completar:hover {
+    background-color: var(--primary-color-darker);
+  }
+  
+  .btn-completar:disabled {
+    background-color: var(--success-color);
+    cursor: not-allowed;
+    opacity: 0.7;
+  }
+  
+  /* CONTADORES */
+  #task-counter {
+    width: 100%;
+    border-top: 1px solid var(--border-color);
+    padding: 1rem;
+    background-color: var(--card-bg);
+  }
+  
+  .task-counters-list {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  /* Cada contador */
+  .counter-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    background-color: rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--border-color);
+    font-size: 0.875rem;
+  }
+  
+  #titulo-tareas-Pendientes-Contador,
+  #titulo-tareas-Terminadas-Contador,
+  #titulo-Total-Tareas-Contador {
+    font-weight: 500;
+  }
+  
+  #cantidad-Pendiente,
+  #cantidad-Terminadas,
+  #cantidad-Total {
+    font-weight: 700;
+    color: var(--primary-color);
+    min-width: 1.5rem;
+    text-align: center;
+  }
+  
+  /* Responsive */
+  @media (max-width: 640px) {
+    #main-title {
+      font-size: 2.5rem;
+    }
+    
+    #Subtitle {
+      font-size: 1.25rem;
+    }
+    
+    .form-input-container {
+      flex-direction: column;
+    }
+    
+    #agregarTarea {
+      padding: 0.75rem 1rem;
+    }
+    
+    .task-counters-list {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    #task-list {
+      max-height: 30rem;
+    }
+    
+    .task-counters-list {
+      justify-content: center;
+      gap: 2rem;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    #main-title {
+      font-size: 4rem;
+    }
+  }

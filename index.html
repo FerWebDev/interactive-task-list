@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas | ESG IA Consultores</title>
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="index.css">
+    
+    <!-- Fuentes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main id="main">
+        <!-- TITULOS -->
+        <h1 id="main-title">ESG IA Consultores</h1>
+        <h2 id="Subtitle">Lista de Tareas</h2>
+        
+        <!-- FORMULARIO -->
+        <form id="form">
+            <div class="form-input-container">
+                <input type="text" id="form-input-task" name="form-input-task" placeholder="Añadir nueva tarea..." autocomplete="off">
+                <button id="agregarTarea" type="submit">Agregar</button>
+            </div>
+            <p id="form-error-text"></p>
+        </form>
+        
+        <!-- LISTA DE TAREAS -->
+        <div class="task-container">
+            <!-- TAREAS -->
+            <ul id="task-list">
+                <!-- Las tareas se generarán dinámicamente con JS -->
+            </ul>
+            
+            <!-- CONTADORES -->
+            <div id="task-counter">
+                <ul class="task-counters-list">
+                    <!-- TAREAS PENDIENTES -->
+                    <li class="counter-item">
+                        <span id="titulo-tareas-Pendientes-Contador">Pendientes</span>
+                        <span id="cantidad-Pendiente">0</span>
+                    </li>
+                    
+                    <!-- TAREAS TERMINADAS -->
+                    <li class="counter-item">
+                        <span id="titulo-tareas-Terminadas-Contador">Completadas</span>
+                        <span id="cantidad-Terminadas">0</span>
+                    </li>
+                    
+                    <!-- TOTAL TAREAS -->
+                    <li class="counter-item">
+                        <span id="titulo-Total-Tareas-Contador">Total</span>
+                        <span id="cantidad-Total">0</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Scripts -->
+    <script src="tasks.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

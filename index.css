@@ -4,7 +4,7 @@
     flex-direction: column;
     align-items: center;
     max-width: var(--content-width);
-    margin: 2rem auto;
+    margin: 1rem auto;
     padding: 0 1rem;
     gap: 1.5rem;
   }
@@ -98,6 +98,7 @@
   }
   
   #task-list {
+    height: 180px;   /* Ajusta la altura de la lista para el scroll en la lista */
     overflow-y: auto;
     max-height: 24rem;
     padding: 0.5rem;

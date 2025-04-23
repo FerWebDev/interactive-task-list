@@ -113,6 +113,7 @@
   /* Tareas */
   .tarea-completada,
   .tarea-Pendiente {
+    word-break: break-word;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -125,6 +126,7 @@
   }
   
   .tarea-completada {
+    word-break: break-word;
     color: var(--disabled-color);
     text-decoration: line-through;
     background-color: rgba(0, 0, 0, 0.03);
